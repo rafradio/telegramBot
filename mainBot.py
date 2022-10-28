@@ -30,6 +30,8 @@ async def cmd_name(message: types.Message):
     await message.answer(x)
     await message.answer("My name is Bot!")
 
+# handler для команд
+
 @dp.message_handler(commands = commandsSQL)
 async def cmd_sqlBD(message: types.Message):
     textTelega = message["text"][1:]
@@ -40,6 +42,8 @@ async def findAnswer(textTelega):
     sqlQuery = "SELECT * FROM database3.bot_commands WHERE database3.bot_commands.name = '" + str(textTelega) + "';"
     sqlObg.MySQLFindAnswer(sqlQuery)
     return sqlObg.answer
+
+# handler для простого общения бота
 
 @dp.message_handler()
 async def just_talk(message: types.Message):
