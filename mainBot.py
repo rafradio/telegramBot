@@ -12,7 +12,7 @@ commandsSQL = list(sqlObg.commands)
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
 # Объект бота
-bot = Bot(token="5650162797:AAEHoDPRkHnsWfkx4HC0loPpFOl3fQofEj0")
+bot = Bot(token="")
 # Диспетчер
 dp = Dispatcher(bot)
 
